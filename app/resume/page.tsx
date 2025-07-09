@@ -4,58 +4,51 @@ import PositionJob from "./component/PositionJob";
 function ResumePage() {
   const positionJob = [
     {
-      time: "2021 - Present",
-      position: "Job Position",
-      companyName: "F",
-      companyLocation: "Quy Nhon",
+      time: "Feb 2024 - Present",
+      position: "Software Developer",
+      companyName: "FPT Software",
+      companyLocation: "Quy Nhon, Vietnam",
       descFirst:
-        "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.",
+        "Working as a full-stack developer focusing on both frontend and backend tasks.",
       descSecon:
-        "I’m a great place for you to tell a story and let your users know a little more about you.",
-    },
-    {
-      time: "2021 - Present",
-      position: "Job Position",
-      companyName: "F",
-      companyLocation: "Quy Nhon",
-      descFirst:
-        "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.",
-      descSecon:
-        "I’m a great place for you to tell a story and let your users know a little more about you.",
+        "Involved in real-world software projects using ReactJS, Java, Node.js, and AWS technologies.",
     },
   ];
 
   const education = [
     {
-      time: "2021 - Present",
-      position: "UNIVERSITY NAME",
-      companyName: "Degree Level",
-      companyLocation: "University Location",
+      time: "2019 - 2023",
+      position: "Quy Nhon University",
+      companyName: "Bachelor of Science",
+      companyLocation: "Quy Nhon, Vietnam",
       descFirst:
-        "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.",
+        "Majored in Software Technology with practical training in full-stack development.",
       descSecon:
-        "I’m a great place for you to tell a story and let your users know a little more about you.",
+        "Gained strong foundation in Java, databases, and web technologies through academic and project-based learning.",
     },
     {
-      time: "2021 - Present",
-      position: "UNIVERSITY NAME",
-      companyName: "Degree Level",
-      companyLocation: "University Location",
+      time: "2023",
+      position: "FPT Software",
+      companyName: "Internship",
+      companyLocation: "Quy Nhon, Vietnam",
       descFirst:
-        "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.",
+        "Completed internship focusing on backend development and Agile workflow.",
       descSecon:
-        "I’m a great place for you to tell a story and let your users know a little more about you.",
+        "Worked with real projects using Java, Spring Boot, and Git under guidance of professional engineers.",
     },
   ];
 
   const professionalSkillset = [
-    "Entrepreneurial Mindset",
-    "Go-to-Market Planning",
-    "Teamwork & Collaboration",
-    "Digital Analytics",
+    "Full-Stack Development (ReactJS, Node.js, Java)",
+    "RESTful API Design",
+    "AWS Lambda & Serverless",
+    "MySQL & MongoDB",
+    "Agile & Scrum",
+    "Docker",
   ];
 
-  const languages = ["English (native)"];
+  const languages = ["English (Intermediate – CEFR B1)"];
+
   return (
     <>
       <Layout>
@@ -67,9 +60,14 @@ function ResumePage() {
           <div className="w-full h-10 flex items-center justify-center">
             <div className="h-full w-[724px] flex items-center justify-between gap-2 px-2">
               <p className="text-2xl font-semibold">Experience</p>
-              <div className="uppercase bg-[#0050ff] text-white h-10 w-36 flex justify-center items-center rounded-3xl border-2 border-[#0050ff] hover:cursor-pointer hover:bg-[#e6dace] hover:text-black">
+
+              <a
+                className="uppercase bg-[#0050ff] text-white h-10 w-36 flex justify-center items-center rounded-3xl border-2 border-[#0050ff] hover:cursor-pointer hover:bg-[#e6dace] hover:text-black"
+                href="./cv/CV_Nguyen Tich Thien.docx"
+                download="CV_Nguyen-Tich-Thien_Software-Developer.docx"
+              >
                 Download CV
-              </div>
+              </a>
             </div>
           </div>
           <div className="h-auto w-full flex justify-center items-center py-10">
@@ -125,7 +123,7 @@ function ResumePage() {
                   </div>
                 </div>
 
-                <div className="p-8 mt-2">
+                <div className="p-8">
                   <h1>Languages</h1>
                   <div className="grid grid-cols-2 gap-4 pt-4 pl-2">
                     {languages.map((languages, index) => (
