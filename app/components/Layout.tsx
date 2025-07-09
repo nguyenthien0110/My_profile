@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import Header from "./Header";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Footer from "./Footer";
 
 type LayoutProps = {
   children: ReactNode;
@@ -22,9 +23,10 @@ function Layout({ children }: LayoutProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <main className="p-8">{children}</main>
+          <main className="pt-32">{children}</main>
         </motion.div>
       </AnimatePresence>
+      <Footer />
     </>
   );
 }

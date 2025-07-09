@@ -8,7 +8,7 @@ function Header() {
   const pathname = usePathname();
   return (
     <>
-      <div className="h-32 w-full flex items-center justify-center">
+      <div className="h-32 w-full flex items-center justify-center fixed z-50 top-0 left-0 right-0 bg-white">
         <div className="h-full w-1/2 flex items-center gap-2">
           <div className="h-4 w-4 bg-blue-500 ml-12"></div>
           <p className="text-xl font-black">Nguyen Tich Thien</p>
