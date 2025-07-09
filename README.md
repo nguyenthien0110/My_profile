@@ -10,7 +10,7 @@ Visit my profile website: [My Profile Website](https://nguyenthien0110.github.io
 
 ## Download CV
 
-[Download CV](assets/cv/CV_Nguyen%20Tich%20Thien.docx)
+[Download CV](cv/CV_Nguyen%20Tich%20Thien.docx)
 
 ## Social Links
 
