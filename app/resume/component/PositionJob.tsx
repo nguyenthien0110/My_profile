@@ -15,7 +15,7 @@ function PositionJob({
 }) {
   return (
     <>
-      <div className="w-[724px] h-96 bg-white flex gap-2 my-6">
+      <div className="w-[724px] h-96 bg-white flex gap-2 my-6 shadow-2xl">
         <div className="h-full w-5/12">
           <div className="pt-16 pl-8">
             <h1 className="text-[#0050ff] font-bold text-xl">{time}</h1>
