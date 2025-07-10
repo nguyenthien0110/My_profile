@@ -4,22 +4,34 @@ import Project from "./component/Project";
 function ProjectPage() {
   const project = [
     {
+      name: "MCP Web",
+      role: "Full Stack Developer",
+      desc: "Built a warehouse management system to optimize pallet stacking. Developed backend APIs with FastAPI and PostgreSQL, and created a responsive frontend using React, TypeScript, and Tailwind CSS.",
+      img: "project05.png",
+    },
+    {
       name: "Isetan",
       role: "Frontend Developer",
-      desc: "Developed a full system including mobile (Flutter), web app (ReactJS), and backend (Java) to meet client requirements. Built responsive UI components and implemented design systems to ensure a consistent user experience.",
-      img: "project1.png",
+      desc: "Developed mobile and web interfaces using Flutter and ReactJS. Created reusable components, applied design systems, and ensured smooth API integration.",
+      img: "project04.png",
     },
     {
       name: "G_FMJPOS24",
       role: "Developer",
-      desc: "Migrated a legacy system from C/C++ to a new architecture using Unity for UI, C# for logic, and Java for microservices. Converted legacy code and ensured code quality throughout the migration process.",
-      img: "project1.png",
+      desc: "Migrated a legacy system from C/C++ to a modern tech stack with Unity UI, C# for logic, and Java microservices. Ensured code compatibility and quality during transition.",
+      img: "project03.png",
     },
     {
-      name: "Jinjer",
+      name: "jinjer",
       role: "Backend Developer",
-      desc: "Developed RESTful APIs using Node.js, AWS Lambda, and MongoDB. Focused on backend logic, performance, and security. Supported new team members and proposed solutions using AWS technologies.",
-      img: "project1.png",
+      desc: "Designed and developed RESTful APIs in a serverless AWS Lambda architecture using PHP, MySQL, and MongoDB. Supported team onboarding and addressed system queries.",
+      img: "project02.png",
+    },
+    {
+      name: "Management Platform",
+      role: "Backend Developer",
+      desc: "Supported backend development using Java Spring Boot, MyBatis, and MySQL. Collaborated with the backend team to ensure the success of the platform.",
+      img: "project01.png",
     },
   ];
 
