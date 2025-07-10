@@ -29,7 +29,12 @@ function Project({
           </div>
         </div>
         <div className="h-full w-5/12 relative">
-          <Image className="object-cover" alt={name} src={img} fill />
+          <Image
+            className="object-cover"
+            alt={name}
+            src={`./img/project/${img}`}
+            fill
+          />
         </div>
       </div>
     </>

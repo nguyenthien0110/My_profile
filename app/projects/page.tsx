@@ -7,19 +7,19 @@ function ProjectPage() {
       name: "Isetan",
       role: "Frontend Developer",
       desc: "Developed a full system including mobile (Flutter), web app (ReactJS), and backend (Java) to meet client requirements. Built responsive UI components and implemented design systems to ensure a consistent user experience.",
-      img: "./img/project/project1.png",
+      img: "project1.png",
     },
     {
       name: "G_FMJPOS24",
       role: "Developer",
       desc: "Migrated a legacy system from C/C++ to a new architecture using Unity for UI, C# for logic, and Java for microservices. Converted legacy code and ensured code quality throughout the migration process.",
-      img: "./img/project/project1.png",
+      img: "project1.png",
     },
     {
       name: "Jinjer",
       role: "Backend Developer",
       desc: "Developed RESTful APIs using Node.js, AWS Lambda, and MongoDB. Focused on backend logic, performance, and security. Supported new team members and proposed solutions using AWS technologies.",
-      img: "./img/project/project1.png",
+      img: "project1.png",
     },
   ];
 
