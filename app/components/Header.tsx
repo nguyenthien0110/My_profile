@@ -3,62 +3,95 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 function Header() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const links = [
+    { href: "/", label: "About Me" },
+    { href: "/resume", label: "Resume" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
     <>
-      <div className="h-32 w-full flex items-center justify-center fixed z-50 top-0 left-0 right-0 bg-white">
-        <div className="h-full w-1/2 flex items-center gap-2">
-          <div className="h-4 w-4 bg-blue-500 ml-12"></div>
-          <p className="text-xl font-black">Nguyen Tich Thien</p>
-          <span className="text-2">/</span>
-          <p className="text-lg italic">Software Developer</p>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow h-20 md:h-32 flex items-center justify-between px-6 md:px-20">
+        <div className="flex items-center gap-2">
+          <div className="h-4 w-4 bg-[#0050ff]"></div>
+          <p className="text-sm sm:text-lg md:text-xl font-black">
+            Nguyen Tich Thien
+          </p>
+          <span className="mx-1">/</span>
+          <p className="text-sm italic">Software Developer</p>
         </div>
-        <div className="h-full w-1/2 flex items-center">
-          <div className="w-full h-9 flex items-center justify-end gap-6 pr-20">
+
+        <nav className="hidden md:flex gap-6">
+          {links.map((link) => (
             <Link
-              href={"/"}
+              key={link.href}
+              href={link.href}
               className={clsx(
-                `h-12 w-auto hover:text-[#0050ff] hover:cursor-pointer flex justify-center items-center uppercase`,
-                pathname && pathname == "/" ? "text-[#0050ff]" : undefined
+                `uppercase hover:text-[#0050ff]`,
+                pathname === link.href ? "text-[#0050ff] font-semibold" : ""
               )}
             >
-              About Me
+              {link.label}
             </Link>
-            <Link
-              href={"/resume"}
+          ))}
+        </nav>
+
+        <div className="md:hidden z-50">
+          <button
+            className="relative w-8 h-6 flex flex-col justify-between items-center hover:cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span
               className={clsx(
-                `h-12 w-auto hover:text-[#0050ff] hover:cursor-pointer flex justify-center items-center uppercase`,
-                pathname && pathname == "/resume" ? "text-[#0050ff]" : undefined
+                "block h-1 w-4 bg-[#0050ff] rounded transition-all duration-500 ease-in-out -translate-x-2",
+                isOpen
+                  ? "-rotate-135 translate-y-[4px] -translate-x-[3px] w-4"
+                  : ""
               )}
-            >
-              Resume
-            </Link>
-            <Link
-              href={"/projects"}
+            />
+            <span
               className={clsx(
-                `h-12 w-auto hover:text-[#0050ff] hover:cursor-pointer flex justify-center items-center uppercase`,
-                pathname && pathname == "/projects"
-                  ? "text-[#0050ff]"
-                  : undefined
+                "block h-1 w-8 bg-[#0050ff] rounded transition-all duration-500 ease-in-out",
+                isOpen ? "-rotate-45" : ""
               )}
-            >
-              Projects
-            </Link>
-            <Link
-              href={"/contact"}
+            />
+            <span
               className={clsx(
-                `h-12 w-auto hover:text-[#0050ff] hover:cursor-pointer flex justify-center items-center uppercase`,
-                pathname && pathname == "/contact"
-                  ? "text-[#0050ff]"
-                  : undefined
+                "block h-1 w-4 bg-[#0050ff] rounded transition-all duration-500 ease-in-out translate-x-2",
+                isOpen
+                  ? "-rotate-135 -translate-y-[4.5px] -translate-x-[2px] w-4"
+                  : ""
               )}
-            >
-              Contact
-            </Link>
-          </div>
+            />
+          </button>
         </div>
+      </header>
+
+      <div
+        className={clsx(
+          "fixed inset-0 z-40 bg-[#f6ede6] flex flex-col items-center justify-center gap-8 text-xl font-bold transition-all duration-500",
+          isOpen ? "translate-y-0" : "translate-y-full"
+        )}
+      >
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={() => setIsOpen(false)}
+            className={clsx(
+              pathname === link.href ? "text-[#0050ff]" : "text-black"
+            )}
+          >
+            {link.label}
+          </Link>
+        ))}
       </div>
     </>
   );
